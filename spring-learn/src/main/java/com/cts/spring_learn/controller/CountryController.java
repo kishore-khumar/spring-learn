@@ -69,38 +69,5 @@ public class CountryController {
 		LOGGER.info("inside add country");
 		countryService.addCountry(country);
 		return country;
-	}
-	
-	/*@PostMapping()
-	public Country addCountry(@RequestBody @Valid Country country)
-	{
-		// Create validator factory
-
-		ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
-
-		Validator validator = factory.getValidator();
-
-		// Validation is done against the annotations defined in country bean
-
-		Set<ConstraintViolation<Country>> violations = validator.validate(country);
-
-		List<String> errors = new ArrayList<String>();
-
-		// Accumulate all errors in an ArrayList of type String
-
-		for (ConstraintViolation<Country> violation : violations) {
-
-		errors.add(violation.getMessage());
-
-		}
-
-		// Throw exception so that the user of this web service receives appropriate error message
-
-		if (violations.size() > 0) {
-
-		throw new ResponseStatusException(HttpStatus.BAD_REQUEST, errors.toString());
-
-		}
-	}*/
-	
+	}	
 }
